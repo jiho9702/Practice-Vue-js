@@ -4,11 +4,11 @@ import MemoDetail from './components/MemoDetail';
 
 const routes = [
   {
-    path: "/memolist",
+    path: "/",
     component: MemoList,
   },
   {
-    path:"/memolist/detail",
+    path:"/detail",
     component: MemoDetail,
   }
 ];

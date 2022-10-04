@@ -1,9 +1,9 @@
 
 <template>
-  <router-link to="memolist/detail">
-    <div v-for="(a,i) in list" :key="i" class="memo-box">
+  <router-link to="/detail">
+    <div class="memo-box" v-for="(a,i) in list" :key="i">
       <h4 class="title">메모</h4>
-      <p>내용</p>
+      <p class="detail">내용</p>
     </div>
   </router-link>
 </template>
@@ -22,13 +22,20 @@ export default {
 <style>
 .memo-box {
   border-radius: 15px;
-  background-color: gray;
+  background-color: #D9D9D9;
   height: 3cm;
   margin: 10px;
   text-align: left;
-  padding-left: 10px;
 }
 .title{
   font-size: 20px;
+  padding: 10px;
+}
+.detail{
+  padding-left: 10px;
+}
+a{
+  text-decoration: none;
+  color: inherit;
 }
 </style>
