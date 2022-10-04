@@ -1,16 +1,20 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+  <router-link to="/memolist"><div>메모장으로 가자 </div></router-link>
+  <router-view>
+  </router-view>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import MemoDetail from './components/MemoDetail.vue';
+// import MemoList from './components/MemoList.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    // MemoList,
+    // MemoDetail,
+}
 }
 </script>
 
