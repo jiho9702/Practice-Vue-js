@@ -1,7 +1,7 @@
 <template>
-  <div class="box">
-    <h1>메모</h1>
-    <p><b>내용</b></p>
+  <div class="box" v-for="boxes in 4" :key="boxes">
+    <h1>메모{{boxes}}</h1>
+    <p><b>내용{{boxes}}</b></p>
   </div>
 </template>
 
