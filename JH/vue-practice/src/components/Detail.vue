@@ -1,5 +1,17 @@
 <template>
   <div>
+    <div class="black-bg" v-if="rev == true">
+        <div class="white-bg">
+          <b>수정하시겠습니까?</b>
+          <div class="btn" @click="revise2">OK</div>
+        </div>
+      </div>
+      <div class="black-bg" v-if="del == true">
+        <div class="white-bg">
+          <b>삭제하시겠습니까?</b>
+          <div class="btn" @click="deletes2">OK</div>
+        </div>
+      </div>
     <div class="left">
       <div class="top-bar">
         <b class="Arrow" @click="goHome"> {{" < "}} </b>
@@ -14,10 +26,10 @@
         <p>내용</p>
       </div>
       <div class="right">
-        <span class="bt1">
+        <span class="bt1" @click="revise">
           수정
         </span>
-        <span class="bt2">
+        <span class="bt2" @click="deletes">
           삭제
         </span>
       </div>
@@ -29,9 +41,27 @@
 
 export default {
   name: 'Detail',
+  data(){
+    return{
+      rev : false,
+      del : false,
+    }
+  },
   methods:{
     goHome(){
       this.$router.push("/");
+    },
+    revise(){
+      this.rev = true;
+    },
+    deletes(){
+      this.del = true;
+    },
+    revise2(){
+      this.rev = false;
+    },
+    deletes2(){
+      this.del = false;
     }
   },
   components: {
@@ -40,13 +70,29 @@ export default {
 </script>
 
 <style>
-.left{
-  float:left;
-  margin-left: 20px;
+body{
+  margin : 0;
+  margin-top:-60px;
+}
+div {
+  box-sizing: border-box;
 }
 
-.top-bar{
-  margin-top:-40px;
+.black-bg{
+  display:flex;
+  width:100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  position:fixed; padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.white-bg{
+  width:300px;
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top:100px;
 }
 
 .Arrow{
@@ -100,5 +146,15 @@ export default {
   padding-left: 20px;
   padding-right: 20px;
   font-weight:bolder;
+}
+
+.btn {
+  background: pink;
+  border-radius: 20px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-weight:bolder;
+  margin-top:10px;
 }
 </style>
