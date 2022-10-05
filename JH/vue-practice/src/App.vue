@@ -1,7 +1,6 @@
 <template>
   <div>
     <router-view />
-    <router-link to="/detail">이동하기</router-link>
   </div>
 </template>
 
