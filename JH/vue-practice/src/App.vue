@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="box">
     <h1>메모</h1>
     <p><b>내용</b></p>
   </div>
@@ -22,5 +22,25 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.box{
+  background: pink;
+  border-radius: 20px;
+  padding: 5px;
+  margin: 20px;
+  padding-bottom: 50px;
+}
+
+.box h1{
+  border: 100px;
+  text-align: left;
+  padding-left: 30px;
+}
+
+.box p{
+  border: 100px;
+  text-align: left;
+  padding-left: 30px;
 }
 </style>
