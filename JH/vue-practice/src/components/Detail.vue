@@ -18,6 +18,7 @@
         <b class="title">상세페이지</b>
       </div>
     </div>
+    <div style="clear: both;"></div>
     <div>
       <div class="box">
         <h1>제목</h1>
@@ -93,6 +94,11 @@ div {
   border-radius: 20px;
   padding: 20px;
   margin-top:100px;
+}
+
+.top-bar{
+  float:left;
+  margin-left: 20px;
 }
 
 .Arrow{
